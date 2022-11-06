@@ -21,14 +21,18 @@ namespace ProductMicroservice.Controllers
             _context = context;
         }
 
+   
+
         // GET: api/Products
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
+           // return Ok("DSfdsFds");
+
             var products = await _context.Products.ToListAsync();
-            if(products.Count()==0)
+            if (products.Count() == 0)
             {
-                _context.Add(new Product {ProductName="product 1", Price = 9.10 });
+                _context.Add(new Product { ProductName = "product 1", Price = 9.10 });
                 _context.Add(new Product { ProductName = "product 2", Price = 3.10 });
                 _context.Add(new Product { ProductName = "product 3", Price = 5.90 });
                 _context.Add(new Product { ProductName = "product 4", Price = 4.50 });
