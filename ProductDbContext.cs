@@ -10,5 +10,6 @@ namespace ProductMicroservice
         {
         }
         public DbSet<Product>? Products { get; set; }
+
     }
 }
