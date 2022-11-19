@@ -274,3 +274,13 @@ C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\obj\Debug\net6.
 C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\obj\Debug\net6.0\ProductMicroservice.pdb
 C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\obj\Debug\net6.0\ProductMicroservice.genruntimeconfig.cache
 C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\obj\Debug\net6.0\ref\ProductMicroservice.dll
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\web.config
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\appsettings.Development.json
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\appsettings.json
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\ProductMicroservice.deps.json
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\ProductMicroservice.runtimeconfig.json
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\binpublish\web.config
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\binpublish\appsettings.Development.json
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\binpublish\appsettings.json
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\binpublish\ProductMicroservice.deps.json
+C:\Users\lenovo\Desktop\repos\devops\backend\ProductMicroservice\bin\Debug\net6.0\binpublish\binpublish\binpublish\binpublish\ProductMicroservice.runtimeconfig.json
