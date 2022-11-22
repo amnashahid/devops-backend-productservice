@@ -14,12 +14,12 @@ namespace ProductMicroservice.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ProductDbContext _context;
+        //private readonly ProductDbContext _context;
 
-        public ProductsController(ProductDbContext context)
-        {
-            _context = context;
-        }
+        //public ProductsController(ProductDbContext context)
+        //{
+        //    _context = context;
+        //}
 
    
 
@@ -27,97 +27,109 @@ namespace ProductMicroservice.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-           // return Ok("DSfdsFds");
+            // return Ok("DSfdsFds");
 
-            var products = await _context.Products.ToListAsync();
+            //var products = await _context.Products.ToListAsync();
+            //if (products.Count() == 0)
+            //{
+            //    _context.Add(new Product { ProductName = "product 1", Price = 9.10 });
+            //    _context.Add(new Product { ProductName = "product 2", Price = 3.10 });
+            //    _context.Add(new Product { ProductName = "product 3", Price = 5.90 });
+            //    _context.Add(new Product { ProductName = "product 4", Price = 4.50 });
+            //    _context.Add(new Product { ProductName = "product 5", Price = 6.00 });
+            //    _context.SaveChanges();
+            //    products = await _context.Products.ToListAsync();
+            //}
+
+
+            var products = new List<Product>();
             if (products.Count() == 0)
             {
-                _context.Add(new Product { ProductName = "product 1", Price = 9.10 });
-                _context.Add(new Product { ProductName = "product 2", Price = 3.10 });
-                _context.Add(new Product { ProductName = "product 3", Price = 5.90 });
-                _context.Add(new Product { ProductName = "product 4", Price = 4.50 });
-                _context.Add(new Product { ProductName = "product 5", Price = 6.00 });
-                _context.SaveChanges();
-                products = await _context.Products.ToListAsync();
+                products.Add(new Product { ProductName = "product 1", Price = 9.10 });
+                products.Add(new Product { ProductName = "product 2", Price = 3.10 });
+                products.Add(new Product { ProductName = "product 3", Price = 5.90 });
+                products.Add(new Product { ProductName = "product 4", Price = 4.50 });
+                products.Add(new Product { ProductName = "product 5", Price = 6.00 });
             }
+
             return products;
         }
 
-        // GET: api/Products/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
-        {
-            var product = await _context.Products.FindAsync(id);
+        //// GET: api/Products/5
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Product>> GetProduct(int id)
+        //{
+        //  //  var product = await _context.Products.FindAsync(id);
 
-            if (product == null)
-            {
-                return NotFound();
-            }
+        //    if (product == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return product;
-        }
+        //    return product;
+        //}
 
-        // PUT: api/Products/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, Product product)
-        {
-            if (id != product.Id)
-            {
-                return BadRequest();
-            }
+        //// PUT: api/Products/5
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutProduct(int id, Product product)
+        //{
+        //    if (id != product.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(product).State = EntityState.Modified;
+        //    _context.Entry(product).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!ProductExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
-        // POST: api/Products
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Product>> PostProduct(Product product)
-        {
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+        //// POST: api/Products
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPost]
+        //public async Task<ActionResult<Product>> PostProduct(Product product)
+        //{
+        //    _context.Products.Add(product);
+        //    await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
-        }
+        //    return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+        //}
 
-        // DELETE: api/Products/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduct(int id)
-        {
-            var product = await _context.Products.FindAsync(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
+        //// DELETE: api/Products/5
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> DeleteProduct(int id)
+        //{
+        //    var product = await _context.Products.FindAsync(id);
+        //    if (product == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
+        //    _context.Products.Remove(product);
+        //    await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
-        private bool ProductExists(int id)
-        {
-            return _context.Products.Any(e => e.Id == id);
-        }
+        //private bool ProductExists(int id)
+        //{
+        //    return _context.Products.Any(e => e.Id == id);
+        //}
     }
 }
